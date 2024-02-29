@@ -1,0 +1,63 @@
+<head>
+  <style>
+    .bar {
+      background-color: red; /* 設定類別為.bar的元素的背景顏色為紅色 */
+      color: white; /* 設定類別為.bar的元素的文字顏色為白色 */
+    }
+    .bar:hover {
+      background-color: blue; /* 當鼠標懸停在類別為.bar的元素上時，其背景顏色變為藍色 */
+    }
+    .bar:active {
+      background-color: green; /* 當類別為.bar的元素被點擊時(處於活動狀態)，其背景顏色變為綠色 */
+    }
+    .content {
+      background-color: orange; /* 設定類別為.content的元素的背景顏色為橘色 */
+      color: black; /* 設定類別為.content的元素的文字顏色為黑色 */
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<button onclick="$('#myTable').toggle();">OPEN FIRE</button>
+
+<script>
+    $(document).ready(function(){
+      // 綁定bar1到content1的顯示切換
+      $("#bar1").click(function(){
+        $("#content1").toggle();
+      });
+      // 綁定bar2到content2的顯示切換
+      $("#bar2").click(function(){
+        $("#content2").toggle();
+      });
+      // 綁定bar3到content3的顯示切換
+      $("#bar3").click(function(){
+        $("#content3").toggle();
+      });
+    });
+  </script>
+<body>
+  <table border="1" width="1000" id="myTable">
+    <!-- BAR 1 -->
+    <tr height="100" class="bar" id="bar1">
+      <td>BAR 1</td>
+    </tr>
+    <tr height="300" class="content" id="content1">
+      <td>CONTENT 1</td>
+    </tr>
+    <!-- BAR 2 -->
+    <tr height="100" class="bar" id="bar2">
+      <td>BAR 2</td>
+    </tr>
+    <tr height="300" class="content" id="content2">
+      <td>CONTENT 2</td>
+    </tr>
+    <!-- BAR 3 -->
+    <tr height="100" class="bar" id="bar3">
+      <td>BAR 3</td>
+    </tr>
+    <tr height="300" class="content" id="content3">
+      <td>CONTENT 3</td>
+    </tr>
+  </table>
+</body>
+
