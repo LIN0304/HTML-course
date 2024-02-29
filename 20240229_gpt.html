@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Combined Layout</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .header, .footer {
+    background-color: orange;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .content {
+    background-color: grey;
+    flex: 1; /* This will allow the content area to expand to fill the space */
+    padding: 20px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">Hello World Hello World Hello World</div>
+    <div class="content">Hello World</div>
+    <div class="footer">Hello World</div>
+  </div>
+</body>
+</html>
