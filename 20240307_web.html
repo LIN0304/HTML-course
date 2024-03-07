@@ -1,0 +1,198 @@
+<style>
+td{
+color: #f8bb00;
+}
+#a{
+color: #0052ff;
+}
+
+</style>
+
+<table width=100 border=1>
+<tr>
+BUY CYRPTO
+</TR>
+    <tr>
+        <td>
+            <img src="D:\411135053\20240307_image\1.PNG" width="64" height="64"><span id="a">1</span>
+        </td>
+		        <td>
+            <img src="D:\411135053\20240307_image\2.PNG" width="64" height="64"><span id="a">2</span>
+        </td>
+		        <td>
+            <img src="D:\411135053\20240307_image\3.PNG" width="64" height="64"><span id="a">3</span>
+        </td>
+		        <td>
+            <img src="D:\411135053\20240307_image\4.PNG" width="64" height="64"><span id="a">4</span>
+        </td>
+		        <td>
+            <img src="D:\411135053\20240307_image\5.PNG" width="64" height="64"><span id="a">5</span>
+        </td>
+    </tr> 
+<TR>
+<TD>
+＄69000<br><button ID="buyItem1">Buy</Button>
+</TD>
+<TD>
+＄69<br><button ID="buyItem2">Buy</Button>
+</TD>
+<TD>
+＄6.9<br><button ID="buyItem3">Buy</Button>
+</TD>
+<TD>
+＄0.69<br><button ID="buyItem4">Buy</Button>
+</TD>
+<TD>
+＄1<br><button ID="buyItem5">Buy</Button>
+</TD>
+</tr>
+	<tr>
+        <td>
+            <img src="D:\411135053\20240307_image\6.PNG" width="64" height="64"><span id="a">6</span>
+        </td>
+		        <td>
+            <img src="D:\411135053\20240307_image\7.PNG" width="64" height="64"><span id="a">7</span>
+        </td>
+		        <td>
+            <img src="D:\411135053\20240307_image\8.PNG" width="64" height="64"><span id="a">8</span>
+        </td>
+		        <td>
+            <img src="D:\411135053\20240307_image\9.PNG" width="64" height="64"><span id="a">9</span>
+        </td>
+		        <td>
+            <img src="D:\411135053\20240307_image\10.PNG" width="64" height="64"><span id="a">10</span>
+        </td>
+    </tr>
+	<TR>
+<TD>
+＄3907.78<br><button ID="buyItem6">Buy</Button>
+</TD>
+<TD>
+＄402.1<br><button ID="buyItem7">Buy</Button>
+</TD>
+<TD>
+＄437.2<br><button ID="buyItem8">Buy</Button>
+</TD>
+<TD>
+＄0.78<br><button ID="buyItem9">Buy</Button>
+</TD>
+<TD>
+＄13.7<br><button ID="buyItem10">Buy</Button>
+</TD>
+</tr>
+	  <tr>
+        <td>
+            <img src="D:\411135053\20240307_image\11.PNG" width="64" height="64"><span id="a">11</span>
+        </td>
+		        <td>
+            <img src="D:\411135053\20240307_image\12.PNG" width="64" height="64"><span id="a">12</span>
+        </td>
+		        <td>
+            <img src="D:\411135053\20240307_image\13.PNG" width="64" height="64"><span id="a">13</span>
+        </td>
+		        <td>
+            <img src="D:\411135053\20240307_image\14.PNG" width="64" height="64"><span id="a">14</span>
+        </td>
+		        <td>
+            <img src="D:\411135053\20240307_image\15.PNG" width="64" height="64"><span id="a">15</span>
+        </td>
+    </tr>
+	<TR>
+<TD>
+＄0.73<br><button ID="buyItem11">Buy</Button>
+</TD>
+<TD>
+＄1<br><button ID="buyItem12">Buy</Button>
+</TD>
+<TD>
+＄1.38<br><button ID="buyItem13">Buy</Button>
+</TD>
+<TD>
+＄144.2<br><button ID="buyItem14">Buy</Button>
+</TD>
+<TD>
+＄23.7<br><button ID="buyItem15">Buy</Button>
+</TD>
+</tr>
+	  <tr>
+        <td>
+            <img src="D:\411135053\20240307_image\16.PNG" width="64" height="64"><span id="a">16</span>
+        </td>
+		        <td>
+            <img src="D:\411135053\20240307_image\17.PNG" width="64" height="64"><span id="a">17</span>
+        </td>
+		        <td>
+            <img src="D:\411135053\20240307_image\18.PNG" width="64" height="64"><span id="a">18</span>
+        </td>
+		        <td>
+            <img src="D:\411135053\20240307_image\19.PNG" width="64" height="64"><span id="a">19</span>
+        </td>
+		        <td>
+            <img src="D:\411135053\20240307_image\20.PNG" width="64" height="64"><span id="a">20</span>
+        </td>
+    </tr><TR>
+<TD>
+＄0.00000854<br><button ID="buyItem16">Buy</Button>
+</TD>
+<TD>
+＄10.3<br><button ID="buyItem17">Buy</Button>
+</TD>
+<TD>
+＄18.6<br><button ID="buyItem18">Buy</Button>
+</TD>
+<TD>
+＄2.71<br><button ID="buyItem19">Buy</Button>
+</TD>
+<TD>
+＄0.00000581<br><button ID="buyItem20">Buy</Button>
+</TD>
+</tr>
+
+</table>
+
+<div id="purchaseSummary">HELLO</div>
+
+<SCRIPT>
+let purchaseCounts = {};
+for (let i = 1; i <= 20; i++) {
+    purchaseCounts['item' + i] = 0;
+}
+
+
+function updateDisplay() {
+    let summary = '';
+    for (let i = 1; i <= 20; i++) {
+        summary += `Item ${i}: ${purchaseCounts['item' + i]}, `;
+    }
+    document.getElementById('purchaseSummary').innerHTML = summary.slice(0, -2); // 移除最後的逗號和空格
+}
+
+
+function buyItem(item) {
+    purchaseCounts[item] += 1; // 增加指定商品的購買數量
+    updateDisplay(); // 更新顯示
+}
+
+// 為每個購買按鈕添加點擊事件監聽器
+document.getElementById('buyItem1').addEventListener('click', () => buyItem('item1'));
+document.getElementById('buyItem2').addEventListener('click', () => buyItem('item2'));
+document.getElementById('buyItem3').addEventListener('click', () => buyItem('item3'));
+document.getElementById('buyItem4').addEventListener('click', () => buyItem('item4'));
+document.getElementById('buyItem5').addEventListener('click', () => buyItem('item5'));
+document.getElementById('buyItem6').addEventListener('click', () => buyItem('item6'));
+document.getElementById('buyItem7').addEventListener('click', () => buyItem('item7'));
+document.getElementById('buyItem8').addEventListener('click', () => buyItem('item8'));
+document.getElementById('buyItem9').addEventListener('click', () => buyItem('item9'));
+document.getElementById('buyItem10').addEventListener('click', () => buyItem('item10'));
+document.getElementById('buyItem11').addEventListener('click', () => buyItem('item11'));
+document.getElementById('buyItem12').addEventListener('click', () => buyItem('item12'));
+document.getElementById('buyItem13').addEventListener('click', () => buyItem('item13'));
+document.getElementById('buyItem14').addEventListener('click', () => buyItem('item14'));
+document.getElementById('buyItem15').addEventListener('click', () => buyItem('item15'));
+document.getElementById('buyItem16').addEventListener('click', () => buyItem('item16'));
+document.getElementById('buyItem17').addEventListener('click', () => buyItem('item17'));
+document.getElementById('buyItem18').addEventListener('click', () => buyItem('item18'));
+document.getElementById('buyItem19').addEventListener('click', () => buyItem('item19'));
+document.getElementById('buyItem20').addEventListener('click', () => buyItem('item20'));
+
+</sCRIPT>
