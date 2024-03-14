@@ -42,6 +42,7 @@ for($i=0;$i<20;$i++){
 <tr>
 <td colspan="5">
 <div id="purchaseSummary"></div>
+<div id="totalPrice">Total Price: $0</div>
 </td>
 </tr>
 
@@ -51,10 +52,11 @@ for($i=0;$i<20;$i++){
 
 <SCRIPT>
 let purchaseCounts = {};
+let totalPrice = 0; // 初始化總價格變量
+
 for (let i = 1; i <= 20; i++) {
     purchaseCounts['item' + i] = 0;
 }
-
 
 function updateDisplay() {
     let summary = '';
@@ -62,10 +64,13 @@ function updateDisplay() {
         summary += `Item ${i}: ${purchaseCounts['item' + i]}, `;
     }
     document.getElementById('purchaseSummary').innerHTML = summary.slice(0, -2); // 移除最後的逗號和空格
+    document.getElementById('totalPrice').innerHTML = `Total Price: $${totalPrice}`; // 顯示總價格
 }
 
-
 function buyItem(item) {
+    let itemId = parseInt(item.replace('item', '')); // 從商品ID字符串中提取編號
+    let itemPrice = itemId + itemId * 10; // 根據提供的公式計算價格
+    totalPrice += itemPrice; // 更新總價格
     purchaseCounts[item] += 1; // 增加指定商品的購買數量
     updateDisplay(); // 更新顯示
 }
