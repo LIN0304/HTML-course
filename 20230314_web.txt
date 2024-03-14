@@ -72,6 +72,32 @@ button {
     }
 }
 
+@keyframes addToCartAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+}
+
+.added-to-cart {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    position: absolute;
+    opacity: 0; /* Start invisible */
+    animation: addToCartAnimation 2s ease-out; /* Use our animation, duration: 2s */
+}
+
 
 
 </style>
@@ -95,6 +121,8 @@ for($i=1;$i<=20;$i++){
         </td>
 		<TD colspan="4">
 ＄<?=$i+$i*10?><br><button ID="buyItem<?=$i?>">Buy</Button>
+<span class="added-to-cart-badge" id="addedToCart<?=$i?>" style="display:none;">Added to Cart</span>
+
 </TD>
 </tr>
 
@@ -137,6 +165,7 @@ function buyItem(item) {
     purchaseCounts[item] += 1; // 增加指定商品的購買數量
     updateDisplay(); // 更新顯示
     updateButtonColor(item, itemPrice);
+    triggerAddedToCartAnimation(itemId);
 }
 
 function updateButtonColor(item, price) {
@@ -150,6 +179,17 @@ function updateButtonColor(item, price) {
     } else {
         button.classList.add('button-high');
     }
+}
+
+function triggerAddedToCartAnimation(itemId) {
+    const badge = document.getElementById(`addedToCart${itemId}`);
+    badge.style.display = 'inline'; // Make the badge visible
+    badge.classList.add('added-to-cart'); // Apply the animation
+
+    // Use setTimeout to remove the animation class, allowing it to be triggered again next time
+    setTimeout(() => {
+        badge.style.display = 'none'; // Hide the badge again after animation
+    }, 2000); // Match the duration of the animation
 }
 
 // 為每個購買按鈕添加點擊事件監聽器
