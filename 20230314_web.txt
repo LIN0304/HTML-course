@@ -1,18 +1,64 @@
 <style>
-td{
-color: #f8bb00;
+body {
+    font-family: 'Arial', sans-serif; /* A more modern font */
+    background-color: #f0f0f0; /* Lighter background for contrast */
 }
-#a{
-color: #0052ff;
+
+table {
+    width: 90%; /* Responsive width */
+    max-width: 500px; /* Maximum width */
+    margin: 20px auto; /* Centering the table */
+    border-collapse: collapse; /* Cleaner borders */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
-#b{
-color: BLACK;
-background-color: #f8bb00;
-FONT-size: 32px;
+
+td, th {
+    color: #333; /* Darker text for readability */
+    padding: 10px; /* More space inside cells */
 }
-#totalPrice{
-color: #ff0000;
+
+#b {
+    color: white; /* Contrast text color */
+    background-color: #007bff; /* Bootstrap primary color for the header */
+    font-size: 24px; /* Adjusted font size */
+    text-align: center; /* Centered text without <center> tag */
 }
+
+img {
+    display: block; /* Remove default alignment */
+    margin: 0 auto; /* Center images */
+    width: 80px; /* Adjusted image size for consistency */
+    height: auto; /* Maintain aspect ratio */
+}
+
+button {
+    background-color: #28a745; /* Bootstrap success color */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #218838; /* Darker shade on hover */
+}
+
+#totalPrice {
+    color: #dc3545; /* Bootstrap danger color for emphasis */
+    font-weight: bold; /* Bold for emphasis */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    td, th {
+        font-size: 14px; /* Smaller text on smaller screens */
+    }
+    button {
+        padding: 3px 6px; /* Smaller buttons on smaller screens */
+    }
+}
+
 
 
 </style>
