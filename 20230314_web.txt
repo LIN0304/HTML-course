@@ -1,0 +1,90 @@
+<style>
+td{
+color: #f8bb00;
+}
+#a{
+color: #0052ff;
+}
+#b{
+color: BLACK;
+background-color: #f8bb00;
+FONT-size: 32px;
+}
+
+</style>
+
+
+<table width=500 border=1 align=center>
+<tr>
+
+<td colspan="5" id="b">
+<center> BUY CYRPTO
+</td>
+
+<?php
+for($i=0;$i<20;$i++){
+?>
+
+</TR>
+    <tr>
+        <td>
+            <img src="D:\411135053\20240307_image\<?=$i+1?>.PNG" width="128" height="128"><span id="a">1</span>
+        </td>
+		<TD colspan="4">
+＄<?=$i*10?><br><button ID="buyItem<?=$i+1?>">Buy</Button>
+</TD>
+</tr>
+
+<?php
+}
+?>
+
+</table>
+
+
+<div id="purchaseSummary"></div>
+
+<SCRIPT>
+let purchaseCounts = {};
+for (let i = 1; i <= 20; i++) {
+    purchaseCounts['item' + i] = 0;
+}
+
+
+function updateDisplay() {
+    let summary = '';
+    for (let i = 1; i <= 20; i++) {
+        summary += `Item ${i}: ${purchaseCounts['item' + i]}, `;
+    }
+    document.getElementById('purchaseSummary').innerHTML = summary.slice(0, -2); // 移除最後的逗號和空格
+}
+
+
+function buyItem(item) {
+    purchaseCounts[item] += 1; // 增加指定商品的購買數量
+    updateDisplay(); // 更新顯示
+}
+
+// 為每個購買按鈕添加點擊事件監聽器
+document.getElementById('buyItem1').addEventListener('click', () => buyItem('item1'));
+document.getElementById('buyItem2').addEventListener('click', () => buyItem('item2'));
+document.getElementById('buyItem3').addEventListener('click', () => buyItem('item3'));
+document.getElementById('buyItem4').addEventListener('click', () => buyItem('item4'));
+document.getElementById('buyItem5').addEventListener('click', () => buyItem('item5'));
+document.getElementById('buyItem6').addEventListener('click', () => buyItem('item6'));
+document.getElementById('buyItem7').addEventListener('click', () => buyItem('item7'));
+document.getElementById('buyItem8').addEventListener('click', () => buyItem('item8'));
+document.getElementById('buyItem9').addEventListener('click', () => buyItem('item9'));
+document.getElementById('buyItem10').addEventListener('click', () => buyItem('item10'));
+document.getElementById('buyItem11').addEventListener('click', () => buyItem('item11'));
+document.getElementById('buyItem12').addEventListener('click', () => buyItem('item12'));
+document.getElementById('buyItem13').addEventListener('click', () => buyItem('item13'));
+document.getElementById('buyItem14').addEventListener('click', () => buyItem('item14'));
+document.getElementById('buyItem15').addEventListener('click', () => buyItem('item15'));
+document.getElementById('buyItem16').addEventListener('click', () => buyItem('item16'));
+document.getElementById('buyItem17').addEventListener('click', () => buyItem('item17'));
+document.getElementById('buyItem18').addEventListener('click', () => buyItem('item18'));
+document.getElementById('buyItem19').addEventListener('click', () => buyItem('item19'));
+document.getElementById('buyItem20').addEventListener('click', () => buyItem('item20'));
+
+</sCRIPT>
