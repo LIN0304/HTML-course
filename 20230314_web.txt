@@ -40,9 +40,22 @@ button {
     cursor: pointer; /* Pointer cursor on hover */
 }
 
-button:hover {
-    background-color: #218838; /* Darker shade on hover */
+.button-low { /* Cheaper items */
+    background-color: #28a745; /* Green */
 }
+
+.button-medium { /* Moderately priced items */
+    background-color: #ffc107; /* Yellow */
+}
+
+.button-high { /* Expensive items */
+    background-color: #dc3545; /* Red */
+}
+
+.button:hover {
+    opacity: 0.8; /* Slight transparency effect on hover for all buttons */
+}
+
 
 #totalPrice {
     color: #dc3545; /* Bootstrap danger color for emphasis */
@@ -123,6 +136,20 @@ function buyItem(item) {
     totalPrice += itemPrice; // 更新總價格
     purchaseCounts[item] += 1; // 增加指定商品的購買數量
     updateDisplay(); // 更新顯示
+    updateButtonColor(item, itemPrice);
+}
+
+function updateButtonColor(item, price) {
+    const button = document.getElementById(`buyItem${item.replace('item', '')}`);
+    button.classList.remove('button-low', 'button-medium', 'button-high'); // Reset color classes
+    
+    if (price <= 30) {
+        button.classList.add('button-low');
+    } else if (price <= 60) {
+        button.classList.add('button-medium');
+    } else {
+        button.classList.add('button-high');
+    }
 }
 
 // 為每個購買按鈕添加點擊事件監聽器
