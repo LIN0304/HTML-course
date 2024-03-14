@@ -28,7 +28,7 @@ for($i=0;$i<20;$i++){
 </TR>
     <tr>
         <td>
-            <img src="D:\411135053\20240307_image\<?=$i+1?>.PNG" width="128" height="128"><span id="a">1</span>
+            <img src="<?=$i+1?>.PNG" width="128" height="128"><span id="a"><?=$i+1?></span>
         </td>
 		<TD colspan="4">
 ＄<?=$i*10?><br><button ID="buyItem<?=$i+1?>">Buy</Button>
@@ -39,10 +39,15 @@ for($i=0;$i<20;$i++){
 }
 ?>
 
+<tr>
+<td colspan="5">
+<div id="purchaseSummary"></div>
+</td>
+</tr>
+
 </table>
 
 
-<div id="purchaseSummary"></div>
 
 <SCRIPT>
 let purchaseCounts = {};
