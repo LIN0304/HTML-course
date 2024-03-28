@@ -47,9 +47,6 @@
     margin: 20px 0;
   }
 </style>
-
-<body>
-  
 <div class="image-section">
   <img src="https://th.bing.com/th/id/OIP.tCBa0Yz8moEq5aJETt-WDwHaHa?w=186&h=186&c=7&r=0&o=5&pid=1.7" alt="Header Image">
 </div>
@@ -75,5 +72,13 @@
   <input type="submit">
   <br>
 </form>
+<div class="image-section">
+  <img src="https://th.bing.com/th/id/OIP.Z-m0nQH5R0Uo9L_GUN2g-AHaFN?w=289&h=203&c=7&r=0&o=5&pid=1.7" alt="Footer Image 1">
+</div>
+<div class="image-section">
+  <img src="https://th.bing.com/th/id/OIP.TExyf4h20yR84Ed_uZ1O2gHaE7?w=253&h=180&c=7&r=0&o=5&pid=1.7" alt="Footer Image 2">
+</div>
+<div class="image-section">
+  <img src="https://th.bing.com/th/id/OIP.cwgC2M8HDE4DUP40pmAedgHaHa?w=203&h=203&c=7&r=0&o=5&pid=1.7" alt="Footer Image 3">
+</div>
 
-  </body>
