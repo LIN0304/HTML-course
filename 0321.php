@@ -47,6 +47,9 @@
     margin: 20px 0;
   }
 </style>
+
+<body>
+  
 <div class="image-section">
   <img src="https://th.bing.com/th/id/OIP.tCBa0Yz8moEq5aJETt-WDwHaHa?w=186&h=186&c=7&r=0&o=5&pid=1.7" alt="Header Image">
 </div>
@@ -72,3 +75,5 @@
   <input type="submit">
   <br>
 </form>
+
+  </body>
